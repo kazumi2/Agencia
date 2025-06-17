@@ -1,0 +1,21 @@
+ .badge-tipo {
+            font-size: 0.7em;
+            vertical-align: super;
+            margin-left: 5px;
+        }
+        .badge-auto { background-color: #007bff; }
+        .badge-hotel { background-color: #28a745; }
+        .badge-paquete { background-color: #ffc107; color: #212529; }
+        .badge-vuelo { background-color: #dc3545; }
+        .badge-bus { background-color: #6f42c1; }
+        .producto-img { 
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 5px 5px 0 0;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }

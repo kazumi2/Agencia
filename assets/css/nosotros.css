@@ -1,0 +1,76 @@
+/* Animaciones de entrada */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease 1s forwards;
+}
+
+.fade-delay-1 {
+  animation-delay: 0.3s;
+}
+.fade-delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Sección Historia */
+.titulo-historia {
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.texto-historia {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.historia-img {
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.historia-img:hover {
+  transform: scale(1.03);
+}
+
+/* Título Equipo */
+.titulo-equipo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+/* Tarjetas del equipo */
+.equipo-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.equipo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Imágenes del equipo */
+.equipo-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Tipografía general */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}

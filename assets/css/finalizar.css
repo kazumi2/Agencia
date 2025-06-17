@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.contenedor {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  text-align: center;
+  color: #1e3c72;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.producto {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  border-left: 5px solid #1e3c72;
+}
+
+.producto h2 {
+  margin-bottom: 10px;
+  color: #2a5298;
+}
+
+.producto p {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #444;
+  font-weight: 600;
+}
+
+.formulario input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.formulario input:focus {
+  border-color: #2a5298;
+  box-shadow: 0 0 5px #2a5298aa;
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px;
+  background: #1e3c72;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #2a5298;
+  box-shadow: 0 0 10px #2a5298aa;
+}
+
+@media (max-width: 600px) {
+  .contenedor {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .producto h2 {
+    font-size: 1.2rem;
+  }
+}
