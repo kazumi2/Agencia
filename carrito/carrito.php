@@ -30,13 +30,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnAccion']) && $_POS
 
         if (!$encontrado) {
             $_SESSION['carrito'][] = [
-                'id' => $producto_id,
-                'tipo' => $tipo,
-                'codigo' => $codigo,
-                'nombre' => $nombre,
-                'precio' => $precio,
-                'cantidad' => $cantidad
-            ];
+    'id' => $producto_id,
+    'tipo' => $tipo,
+    'codigo' => $codigo,
+    'nombre' => $nombre,
+    'precio' => $precio,
+    'cantidad' => $cantidad,
+    'imagen' => $_POST['imagen'] ?? 'default.jpg'
+   
+];
+     
         }
     }
 }
@@ -68,31 +71,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnAccion']) && $_POS
     <meta charset="UTF-8" />
     <title>Carrito de Compras</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/css/carrito.css" />
 </head>
 <body>
 
 <div class="container py-5">
     <h1 class="text-center mb-4">🛒 Carrito de Compras</h1>
-
-    <!-- Aquí un ejemplo para agregar un producto (solo para prueba) -->
-    <div class="mb-5">
-        <h3>Agregar Producto de Prueba</h3>
-        <form action="" method="post" class="row g-3 align-items-center">
-            <input type="hidden" name="producto_id" value="101" />
-            <input type="hidden" name="tipo" value="producto" />
-            <input type="hidden" name="codigo" value="PROD101" />
-            <input type="hidden" name="nombre" value="Producto Ejemplo" />
-            <input type="hidden" name="precio" value="250.00" />
-            <div class="col-auto">
-                <label for="cantidad" class="col-form-label">Cantidad:</label>
-            </div>
-            <div class="col-auto">
-                <input type="number" min="1" value="1" id="cantidad" name="cantidad" class="form-control" required />
-            </div>
-            <div class="col-auto">
-                <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
-            </div>
-        </form>
     </div>
 
     <?php if (empty($_SESSION['carrito'])): ?>
@@ -125,16 +109,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnAccion']) && $_POS
                         $subtotal = $precio * $cantidad;
                         $total += $subtotal;
 
-                        $imagen = '../assets/img/productos/' . $codigo . '.jpg';
+                        $imagen = '../assets/img/' . ($item['imagen'] ?? 'default.jpg');
+                      
                     ?>
                     <tr>
-                        <td><img src="<?= htmlspecialchars($imagen) ?>" alt="<?= htmlspecialchars($nombre) ?>" width="80" height="60" style="object-fit: cover; border-radius: 8px;"></td>
+                        <td><img src="<?= htmlspecialchars($imagen) ?>" alt="<?= htmlspecialchars($nombre) ?>" width="80" height="60" style="object-fit: cover; border-radius: 8px;">
+                         </td>
                         <td><?= htmlspecialchars($nombre) ?></td>
                         <td><?= htmlspecialchars($codigo) ?></td>
                         <td><?= htmlspecialchars(ucfirst($tipo)) ?></td>
                         <td>$<?= number_format($precio, 2) ?></td>
                         <td><?= intval($cantidad) ?></td>
                         <td>$<?= number_format($subtotal, 2) ?></td>
+                    
                         <td>
                             <form action="" method="post" onsubmit="return confirm('¿Seguro que quieres eliminar este producto?');">
                                 <input type="hidden" name="producto_id" value="<?= htmlspecialchars($item['id']) ?>">
@@ -156,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnAccion']) && $_POS
 
         <div class="text-center">
             <a href="confirmarpago.php" class="btn btn-success">Finalizar Compra</a>
-            <a href="../paginas/index.php" class="btn btn-secondary">Seguir comprando</a>
+            <a href="../administrador/seccion/productos.php" class="btn btn-secondary">Seguir comprando</a>
         </div>
     <?php endif; ?>
 

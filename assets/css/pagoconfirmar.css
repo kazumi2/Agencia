@@ -1,0 +1,100 @@
+body {
+  background: linear-gradient(to right, #00b4d8, #90e0ef);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+.container {
+  background-color: #ffffffdd;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: 800px;
+  margin: auto;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+h1, h3 {
+  color: #0077b6;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.table {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table td {
+  background-color: #f8f9fa;
+  text-align: center;
+  vertical-align: middle;
+}
+
+form {
+  margin-top: 30px;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #023e8a;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
+}
+
+.btn-success {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 123, 86, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-success:hover {
+  background-color: #028858;
+  transform: scale(1.03);
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+  color: #0c5460;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+/* Animación suave de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

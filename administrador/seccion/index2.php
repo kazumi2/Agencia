@@ -15,7 +15,6 @@
 
 ?>
 
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -26,6 +25,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/css/loginadmin.css" />
 
     <title>Document</title>
 </head>
@@ -64,7 +64,7 @@
                    <input type="password" class="form-control" id="exampleInputPassword1" name="contrasenia" placeholder="contraseña">
                    </div>
                    
-                   <button href="./administrador/seccion/productos.php" type="submit" class="btn btn-primary">Ingresar al Administrador</button>
+                   <button href="./administrador/seccion/inicio.php" type="submit" class="btn btn-primary">Ingresar al Administrador</button>
                    </form>
                    
                    

@@ -17,11 +17,8 @@
       </a>
       <nav>
         <ul class="nav">
-          <li class="nav-item"><a href="index.php" class="nav-link text-white">Inicio</a></li>
+          <li class="nav-item"><a href="../../index.php" class="nav-link text-white">Inicio</a></li>
           <li class="nav-item"><a href="../../carrito/carrito.php " class="nav-link text-white">Carrito (<span id="contador-carrito">0</span>)</a></li>
-            <li class="nav-item"><a class="nav-link active" href="index.php">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="../productos/auto.php">Alquilar auto</a></li>
-          <li class="nav-item"><a class="nav-link" href="./administrador/index.php">Administrador</a></li>
         </ul>
       </nav>
     </div>
@@ -59,13 +56,22 @@
       <!-- Producto 1 -->
       <div class="col-sm-6 col-md-4 col-lg-3 producto" data-categoria="playa" data-precio="1500">
         <div class="card shadow-sm h-100">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Paquete Playa">
+          <img src="../../assets/img/Escapada a la Playa.avif" class="card-img-top" alt="Paquete Playa">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Escapada a la Playa</h5>
             <p class="card-text flex-grow-1">Disfruta de 5 días de sol y mar en la mejor playa tropical.</p>
             <div class="d-flex justify-content-between align-items-center mt-3">
               <span class="precio fs-5 fw-bold text-primary">$1500 ARS</span>
-              <button class="btn btn-primary btn-agregar" data-id="1">Agregar al carrito</button>
+              <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="1" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ001" />
+  <input type="hidden" name="imagen" value="../../assets/img/Escapada a la Playa.avif" />
+  <input type="hidden" name="nombre" value="Escapada a la Playa" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
             </div>
           </div>
         </div>
@@ -74,13 +80,22 @@
       <!-- Producto 2 -->
       <div class="col-sm-6 col-md-4 col-lg-3 producto" data-categoria="montaña" data-precio="1800">
         <div class="card shadow-sm h-100">
-          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Paquete Montaña">
+          <img src="../../assets/img/Aventura en la Montaña.avif" class="card-img-top" alt="Paquete Montaña">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Aventura en la Montaña</h5>
             <p class="card-text flex-grow-1">Excursión de 7 días para amantes del trekking y la naturaleza.</p>
             <div class="d-flex justify-content-between align-items-center mt-3">
               <span class="precio fs-5 fw-bold text-primary">$1800 ARS</span>
-              <button class="btn btn-primary btn-agregar" data-id="2">Agregar al carrito</button>
+              <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="2" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ002" />
+  <input type="hidden" name="imagen" value="../../assets/img/Aventura en la Montaña.avif"/>
+  <input type="hidden" name="nombre" value="Aventura en la Montaña" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
             </div>
           </div>
         </div>
@@ -89,13 +104,22 @@
       <!-- Producto 3 -->
       <div class="col-sm-6 col-md-4 col-lg-3 producto" data-categoria="cultural" data-precio="900">
         <div class="card shadow-sm h-100">
-          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Paquete Ciudad">
+          <img src="../../assets/img/Tour por la Ciudad.avif" class="card-img-top" alt="Paquete Ciudad">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">Tour por la Ciudad</h5>
             <p class="card-text flex-grow-1">Visita guiada por los puntos históricos y culturales más emblemáticos.</p>
             <div class="d-flex justify-content-between align-items-center mt-3">
               <span class="precio fs-5 fw-bold text-primary">$900 ARS</span>
-              <button class="btn btn-primary btn-agregar" data-id="3">Agregar al carrito</button>
+             <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="3" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ003" />
+  <input type="hidden" name="imagen" value="../../assets/img/Tour por la Ciudad.avif"/>
+  <input type="hidden" name="nombre" value="Tour por la Ciudad" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
             </div>
           </div>
         </div>
@@ -110,7 +134,16 @@
       <p class="card-text flex-grow-1">Disfruta de caminatas y la tranquilidad de la naturaleza.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$1300 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="4">Agregar al carrito</button>
+       <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="4" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ004" />
+  <input type="hidden" name="imagen" value="bosque.jpg" />
+  <input type="hidden" name="imagen" value="../../assets/img/bosque.jpg" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -125,7 +158,16 @@
       <p class="card-text flex-grow-1">Explora la fauna salvaje y paisajes impresionantes.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$2500 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="5">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="5" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ005" />
+  <input type="hidden" name="imagen" value="../../assets/img/safari.jpeg" />
+  <input type="hidden" name="nombre" value="Safari en Africa" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -134,13 +176,22 @@
 <!-- Producto 6 -->
 <div class="col-sm-6 col-md-4 col-lg-3 producto" data-categoria="aventura" data-precio="2200">
   <div class="card shadow-sm h-100">
-    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Paquete Nieve">
+    <img src="../../assets/img/Aventura en la Nieve.avif" class="card-img-top" alt="Paquete Nieve">
     <div class="card-body d-flex flex-column">
       <h5 class="card-title">Aventura en la Nieve</h5>
       <p class="card-text flex-grow-1">Disfruta de esquí y snowboard en las mejores pistas.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$2200 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="6">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="6" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ006" />
+  <input type="hidden" name="imagen" value="../../assets/img/Aventura en la Nieve.avif"/>
+  <input type="hidden" name="nombre" value="Aventura en la Nieve" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -155,7 +206,16 @@
       <p class="card-text flex-grow-1">Experimenta las dunas y paisajes áridos sorprendentes.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$1600 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="7">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="7" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ007" />
+  <input type="hidden" name="imagen" value="..\..\assets\img\desierto.jpg" />
+  <input type="hidden" name="nombre" value="Tour por el Desierto" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -170,7 +230,16 @@
       <p class="card-text flex-grow-1">Relájate en playas de arena blanca y aguas cristalinas.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$2700 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="8">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="8" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ008" />
+  <input type="hidden" name="imagen" value="..\..\assets\img\paraiso.jpg" />
+  <input type="hidden" name="nombre" value="Isla Paradisiacas" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -185,7 +254,16 @@
       <p class="card-text flex-grow-1">Navega y disfruta del paisaje desde un barco confortable.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$2000 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="9">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="9" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ009" />
+  <input type="hidden" name="imagen" value="..\..\assets\img\crucero.jpg" />
+  <input type="hidden" name="nombre" value="Crucero por el Rio" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -194,13 +272,22 @@
 <!-- Producto 10 -->
 <div class="col-sm-6 col-md-4 col-lg-3 producto" data-categoria="playa" data-precio="2400">
   <div class="card shadow-sm h-100">
-    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Paquete Isla Tropical">
+    <img src="../../assets/img/Isla Tropical.avif" class="card-img-top" alt="Paquete Isla Tropical">
     <div class="card-body d-flex flex-column">
       <h5 class="card-title">Isla Tropical</h5>
       <p class="card-text flex-grow-1">Disfruta de la vida isleña y actividades acuáticas.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$2400 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="10">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="10" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ0010" />
+  <input type="hidden" name="imagen" value="../../assets/img/Isla Tropical.avif"/>
+  <input type="hidden" name="nombre" value="Isla Tropical" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -215,7 +302,16 @@
       <p class="card-text flex-grow-1">Disfruta de las estrellas y el mar en la noche.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$1800 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="11">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="11" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ0011" />
+  <input type="hidden" name="imagen" value="..\..\assets\img\playa nocturna.jpg" />
+  <input type="hidden" name="nombre" value="Playa Noctucna" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -230,7 +326,16 @@
       <p class="card-text flex-grow-1">Relájate y practica deportes acuáticos en un lago tranquilo.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$1700 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="12">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="12" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ0012" />
+  <input type="hidden" name="imagen" value="..\..\assets\img\lago.jpg" />
+  <input type="hidden" name="nombre" value="Viaje al Lago" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -245,7 +350,16 @@
       <p class="card-text flex-grow-1">Explora la fauna salvaje con guía profesional y cámara en mano.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$2500 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="13">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="13" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ0013" />
+  <input type="hidden" name="imagen" value="..\..\assets\img\lago.jpg" />
+  <input type="hidden" name="nombre" value="Safari Fotografico" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -260,7 +374,16 @@
       <p class="card-text flex-grow-1">Ascenso a volcanes activos con vistas increíbles.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$1900 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="14">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="14" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ0014" />
+  <input type="hidden" name="imagen" value="..\..\assets\img\volcan.jpg" />
+  <input type="hidden" name="nombre" value="Exploracion de volcan" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -275,7 +398,16 @@
       <p class="card-text flex-grow-1">Aventura aislada en una isla virgen.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$2800 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="15">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="15" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ0015" />
+  <input type="hidden" name="imagen" value="..\..\assets\img\isla.webp" />
+  <input type="hidden" name="nombre" value="Isla Remota" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -290,7 +422,16 @@
       <p class="card-text flex-grow-1">Sumérgete en la cultura y tradiciones locales.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$1400 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="16">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="16" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ0016" />
+  <input type="hidden" name="imagen" value="..\..\assets\img\cultura.webp" />
+  <input type="hidden" name="nombre" value="Tour Cultural" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -305,7 +446,16 @@
       <p class="card-text flex-grow-1">Deportes de adrenalina para los más valientes.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$2300 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="17">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="17" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ0017" />
+  <input type="hidden" name="imagen" value="..\..\assets\img\extremo.jpg" />
+  <input type="hidden" name="nombre" value="Aventura Extrema" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -320,7 +470,16 @@
       <p class="card-text flex-grow-1">Relájate navegando en aguas tranquilas.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$1700 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="18">Agregar al carrito</button>
+       <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="1" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ0018" />
+  <input type="hidden" name="imagen" value="..\..\assets\img\barco.jpg" />
+  <input type="hidden" name="nombre" value="Paseo en Barco" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -335,7 +494,16 @@
       <p class="card-text flex-grow-1">Disfruta de grandes artistas en un ambiente único.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$2100 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="19">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="19" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ0019" />
+  <input type="hidden" name="imagen" value="..\..\assets\img\musica.avif" />
+  <input type="hidden" name="nombre" value="Festival de Musica" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -350,7 +518,16 @@
       <p class="card-text flex-grow-1">Días de descanso con tratamientos de bienestar.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$2000 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="20">Agregar al carrito</button>
+       <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="20" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ0020" />
+  <input type="hidden" name="imagen" value="..\..\assets\img\spa.jpg" />
+  <input type="hidden" name="nombre" value="Relajacion en Spa" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>
@@ -365,7 +542,16 @@
       <p class="card-text flex-grow-1">Vive la naturaleza y la aventura al aire libre.</p>
       <div class="d-flex justify-content-between align-items-center mt-3">
         <span class="precio fs-5 fw-bold text-primary">$1500 ARS</span>
-        <button class="btn btn-primary btn-agregar" data-id="21">Agregar al carrito</button>
+        <form action="../../carrito/carrito.php" method="post">
+  <input type="hidden" name="producto_id" value="21" />
+  <input type="hidden" name="tipo" value="paquete" />
+  <input type="hidden" name="codigo" value="PAQ0021" />
+  <input type="hidden" name="imagen" value="..\..\assets\img\bajo las estrella.avif"/>
+  <input type="hidden" name="nombre" value="camping bajo las estrellas" />
+  <input type="hidden" name="precio" value="1500" />
+  <input type="hidden" name="cantidad" value="1" />
+  <button type="submit" name="btnAccion" value="Agregar" class="btn btn-primary">Agregar al carrito</button>
+</form>
       </div>
     </div>
   </div>

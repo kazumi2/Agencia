@@ -11,7 +11,7 @@
     <h1>¡Pago confirmado!</h1>
     <p>Gracias por confiar en nuestra agencia de turismo.</p>
     <p>Te enviaremos los detalles a tu correo electrónico.</p>
-    <button onclick="window.location.href='index.html'" class="btn-volver">Volver al inicio</button>
+    <button onclick="window.location.href='../index.php'" class="btn-volver">Volver al inicio</button>
   </div>
 </body>
 </html>

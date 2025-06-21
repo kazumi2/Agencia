@@ -13,7 +13,7 @@
   </header>
 
   <main class="formulario-container">
-    <form action="confirmarpago.html" method="POST">
+    <form action="confirmarpago.php" method="POST">
       <label for="nombre">Nombre completo:</label>
       <input type="text" id="nombre" name="nombre" required>
 
@@ -74,7 +74,7 @@
     </form>
 
     <div class="volver">
-      <a href="auto.html"><i class="fas fa-arrow-left"></i> Volver a Autos</a>
+      <a href="auto.php"><i class="fas fa-arrow-left"></i> Volver a Autos</a>
     </div>
   </main>
 </body>

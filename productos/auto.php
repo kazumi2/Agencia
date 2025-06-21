@@ -9,8 +9,7 @@
   <header>
     <nav>
       <ul>
-        <li><a href="../paginas/index.php">Inicio</a></li>
-        <li class="nav-item"><a href="../../carrito/carrito.php " class="nav-link text-white">Carrito (<span id="contador-carrito">0</span>)</a></li>
+        <li><a href="../index.php">Inicio</a></li>
       </ul>
     </nav>
     <h1>Alquiler de Autos</h1>

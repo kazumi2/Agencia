@@ -63,7 +63,7 @@ unset($_SESSION['carrito']);
   <div class="thank-you-card">
     <h1>¡Gracias por tu compra! 🎉</h1>
     <p>Tu pedido fue procesado con éxito.<br>¡Te esperamos de nuevo!</p>
-    <a href="../paginas/index.php" class="btn-home">Volver a la tienda</a>
+    <a href="../index.php" class="btn-home">Volver al inicio</a>
   </div>
 </body>
 </html>
